@@ -1,0 +1,14 @@
+---
+- hosts: db
+  gather_facts: false
+
+  tasks:
+    - name: Crete a practice directory
+      file:
+        path: ./ansible_practice
+        state: directory
+
+    - name: Create a hello file inside the directory
+      copy:
+        content: "Ansible was here!\n"
+        dest: ./ansible_practice/hello-semaphore.txt
