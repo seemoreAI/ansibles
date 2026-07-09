@@ -3,7 +3,7 @@
 
   tasks:
     - name: Get system's kernel version
-      shell: /usr/bin/uname -r
+      shell: cat /etc/os-release
       register: kver
 
     - name: Debug info
