@@ -20,5 +20,7 @@
       dnf: name=mariadb,mariadb-server state=present
 
     - name: Start and enable MariaDB
-      service: name=mariadb state=started enabled=true    - name: Allow port 3306/tcp in the firewall
+      service: name=mariadb state=started enabled=true    
+    
+    - name: Allow port 3306/tcp in the firewall
       firewalld: port=3306/tcp state=enabled permanent=yes immediate=yes
